@@ -1,0 +1,109 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+
+img {
+   max-width: 100%;
+   width: 90%;
+   height: auto;
+ }
+
+html,
+body {
+  font-family: "Garamond";
+  font-size: 150%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Garamond";
+  font-size:3em;
+}
+
+h3 {
+  font-family: "MS Mincho";
+  font-size: 30px;
+}
+
+h6{
+  font-family: "MS Mincho";
+  font-size: 30px;
+}
+
+/* Wrap page for footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  /*height: 100%;*/
+  /* Negative indent footer by its height */
+  margin: 0 auto -100px;
+  /* Pad bottom by footer height */
+  padding: 0 0 100px;
+}
+
+#footer {
+  height: 100px;
+}
+
+#wrap > .container {
+  margin-top: 200px;
+  padding: 0px 0px 0px;
+  /*padding: 15% 5% 5%;*/
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/*Navbar colour*/
+.navbar{
+  background-color: rgba(255,255,255,1);
+}
+
+/*Navbar setting alignment*/
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.navbar-nav .active a{
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/*Item left and right indicators*/
+.navbar-nav a::before, .navbar-nav a::after{
+  opacity:0;
+  display: inline-block;
+  transition: transform 0.4s, opacity 0.2s;
+}
+
+/*Item left indicator*/
+.navbar-nav a::before{
+    content:'\22C5';
+  	transform: translateX(5px);
+}
+
+/*Item right indicator*/
+.navbar-nav a::after{
+    content:'\22C5';
+    transform: translateX(-5px);
+}
+
+/*Indicator appear state*/
+.navbar-nav a:hover::before,
+.navbar-nav a:hover::after,
+.navbar-nav a:focus::before,
+.nav a:focus::after, /*.navbar-nav a:focus::after,*/
+.navbar .active a::before,
+.navbar .active a::after
+{
+    opacity:1;
+    transform:translateX(0px);
+}
