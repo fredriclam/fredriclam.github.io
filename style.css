@@ -49,6 +49,11 @@ h6{
   width: 85%;
 }
 
+.gamefeature{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* Wrap page for footer */
 #wrap {
   min-height: 100%;
