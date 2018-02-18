@@ -1,20 +1,126 @@
-/* Sticky footer styles
--------------------------------------------------- */
-
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+/* Offline debug */
+/*@import url(./bootstrap.min.css);*/
+
+p {
+    color:red,
+    font-family:Verdana, sans-serif
+}
+
+html,
+body {
+  font-family: "Garamond";
+  font-size: 100%;
+  height: 100%;
+    line-height: 0.5
+}
+
+/* Box for displaying photo blocks and photo tiles */
+.photo-box {
+    background-image: url(DSC_0142.JPG);
+    background-color: rgba(255, 255, 255, .2);
+    background-blend-mode: color-dodge;
+    background-size: 300%;
+    background-position: 55% 57%;
+    background-attachment: fixed;
+    padding-bottom: 1000px;
+}
+
+/* Mini photo blocks */
+.photo-block {
+    background-size: 150%;
+    background-attachment: scroll;
+    border-radius: 0%;
+    /*max-width: 8%;*/
+    padding-bottom: 10%;
+    display: inline-block;
+    inline-size: 10%;
+    transition: all .3s ease-in-out;
+    margin-right: -5px;
+    margin-bottom: -6px;
+}
+.photo-block:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    background-blend-mode: soft-light;
+    transition: all .3s ease-in-out;
+}
+
+.vertical-block {
+    margin-left: 45%;
+}
+
+/* Large tile for two in a row */
+.photo-tile {
+    background-size: 250%;
+    background-attachment: scroll;
+    background-position: center;
+    border-radius: 0%;
+    display: inline-block;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-right: -5px;
+    margin-bottom: -6px;
+    inline-size: 20%;
+    padding-bottom: 20%;
+}
+
+/* Expanding photo banner for two in a row */
+.photo-banner-two:hover {
+    background-size: 150%;
+    background-position: center;
+    inline-size: 80%;
+    /*transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);*/
+}
+
+/* Expanding photo banner for three in a row */
+.photo-banner-three:hover {
+    background-size: 150%;
+    background-position: center;
+    padding-bottom: 20%;
+    inline-size: 60%;
+    /*transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);*/
+}
+
+/* Right-shifted group for containing banners */
+.banner-group-right-shifted {
+    margin-left: 20%;
+    padding-left: 0;
+    display: inline;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.banner-group-right-shifted:hover {
+    margin-left: 0%;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Right-shifted group for containing banners */
+.banner-group-left-shifted {
+    margin-left: -20%;
+    padding-left: 0;
+    display: inline;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.banner-group-left-shifted:hover {
+    margin-left: 0%;
+    transition: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Masked hiragana A */
+#masked-a {
+    background-image: url("DSC_0142.JPG");
+    background-size: 100%;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    -webkit-mask-image: url('A.png');
+    -webkit-mask-position-x: center;
+    -webkit-mask-position-y: 30%;
+    -webkit-mask-size: 200%;
+}
 
 img {
    max-width: 100%;
    width: 90%;
    height: auto;
  }
-
-html,
-body {
-  font-family: "Garamond";
-  font-size: 150%;
-  height: 100%;
-}
 
 h1 {
   font-family: "Garamond";
@@ -26,58 +132,55 @@ h3 {
   font-size: 30px;
 }
 
-h6{
-  font-family: "MS Mincho";
-  font-size: 30px;
-}
 
+/* Text box in left column (narrow) */
 .textboxleft{
   float: left;
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
-  width: 15%;
+  width: 20%;
+  overflow: auto;
 }
 
+/* Text box in right column (wide) */
 .textboxright{
   float: left;
   margin-bottom: 20px;
   font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
-  width: 85%;
+  width: 80%;
 }
 
+.datetext{
+  font-size:70%;
+}
+
+/* Feature text box */ /* REFACTOR CHANGE TO .itemfeature */
 .gamefeature{
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* Wrap page for footer */
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  /*height: 100%;*/
-  /* Negative indent footer by its height */
-  margin: 0 auto -100px;
-  /* Pad bottom by footer height */
-  padding: 0 0 100px;
-}
-
 #footer {
-  height: 100px;
+  min-height: 100px;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 
 #wrap > .container {
-  margin-top: 275px;
-  padding: 0px 0px 0px;
-  /*padding: 15% 5% 5%;*/
+  margin-top: 110px;
+  margin-left: 20px;
+  margin-right: 0px;
+  padding-left: 0px;
+  /*margin: 110px 0px 0px;*/
 }
 
 #footer > .container {
-  padding-left: 15px;
-  padding-right: 15px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
 }
 
 /*Navbar colour*/
@@ -92,30 +195,21 @@ h6{
   vertical-align: top;
 }
 
-.navbar .navbar-collapse {
-  text-align: center;
-}
-
-.navbar-nav .active a{
-  background-color: rgba(255, 255, 255, 0) !important;
-}
-
-/*Item left and right indicators*/
+/*Navbar item left and right indicators*/
 .navbar-nav a::before, .navbar-nav a::after{
   opacity:0;
   display: inline-block;
-  transition: transform 0.4s, opacity 0.2s;
+  transition: transform 0.5s, opacity 0.2s;
+  content:'\22C5';
 }
 
-/*Item left indicator*/
-.navbar-nav a::before{
-    content:'\22C5';
+/*Navbar item left indicator*/
+.navbar-nav a::before{    
   	transform: translateX(5px);
 }
 
-/*Item right indicator*/
+/*Navbar item right indicator*/
 .navbar-nav a::after{
-    content:'\22C5';
     transform: translateX(-5px);
 }
 
@@ -123,10 +217,35 @@ h6{
 .navbar-nav a:hover::before,
 .navbar-nav a:hover::after,
 .navbar-nav a:focus::before,
-.nav a:focus::after, /*.navbar-nav a:focus::after,*/
+.nav a:focus::after,
 .navbar .active a::before,
 .navbar .active a::after
 {
     opacity:1;
     transform:translateX(0px);
+}
+
+.navbar-nav a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar-nav a:hover {
+    text-decoration: none;
+}
+
+/* Lead block */
+#lead {
+    top-margin: 0px;
+}
+
+.title-link {
+   font-weight: 300;
+   text-decoration: none;
+   color: black;
+}
+
+.title-link:hover {
+   text-decoration: none;
+   color: black;
 }

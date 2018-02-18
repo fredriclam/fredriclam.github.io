@@ -2,31 +2,45 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name = "description"
+  content="fredriclam @ github pages"/>
+  <meta name="author" content="Fredric Lam" />
+
+  <meta name="viewport" content="width=device-width,
+  initial-scale=1.0,
+  minimum-scale=1.0,
+  maximum-scale=1.0" />
+
   <title> fredriclam.io </title>
   <!-- Link CSS -->
   <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+  <!-- Prerender -->
+  <link rel="prerender" href="./index.html" />
 </head>
+    
 <body>
-  <!-- Wrap page (minus footer) -->
+  <!-- Wrap page in div -->
   <div id="wrap">
     <!-- Navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
         <h1>
           <center>
-            FL
+            <a class="title-link" href="./index.html">FL</a>
           </center>
         </h1>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="./index.html">Front</a></li>
-          <li><a href="./profile.html">Profile</a></li>
-          <li class="active"><a href="">Game</a></li>
+      <div style="text-align:center"> <!-- class="navbar-collapse"> -->
+        <div class="nav navbar-nav">
+        <a href="./game.html">science</a>
+        <a href="./game.html">game-dev</a>
+          </div>
+          <!-- <ul class="nav navbar-nav">
+          <li><a href="./game.html">Game</a></li>
           <li><a href="./science.html">Science</a></li>
-    </ul>
+        </ul> -->
+      </div>
+    </div>
   </div>
-</div>
-</div>
 
 <!-- Centre body -->
 <div class="container">
@@ -37,10 +51,12 @@
   <p class="lead">
     The games below that load in-browser may take a minute or so.
   </p>
-  <section> <!-- Table Slam -->
+  
+    <section> <!-- Table Slam -->
   <center>
     <div class="template-wrap clear">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+      <!-- height="600px" width="960px" -->
+      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
       <br>
       <!-- <div class="logo"></div>
       <div class="fullscreen"><img src="TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
@@ -62,30 +78,28 @@
     <script src="Release/UnityLoader.js"></script>
   </center>
 
-  <p class="textboxleft">
-    <strong>Table Slam!</strong>
-    </br>
-  &nbsp;2017.11
-  </p>
-  <p class="textboxright">
+  <div class="textboxleft">   
+      <strong>Table Slam!</strong>
+      <p class="datetext">&nbsp;2017.11</p>
+      </div>
+  <div class="textboxright"><p>
     A two-button simulation game using Unity in the style of early Japanese arcade games.
     The setting of this game is inspired by 2009 Japanese arcade game <em>Super Table Flip</em> (超・ちゃぶ台返し) in which a low table is slammed and subsequently thrown into the air.
 
     Camera and water surface shake is achieved using random perturbations to a spring &amp; damper model popular in mechanical engineering, while a mix of vignetting and chromatic abberation are used to add detail to the scene.
     The background used is a photo of <em>Izakaya Tomo</em> (Edmonton, Alberta; <a href = "https://yegitup.wordpress.com/2013/01/31/dining-review-izakaya-tomo/">credits</a>)
-  </p>
+      </p></div>
   </section>
 
   <section> <!-- Escape velocity -->
 
   <center><img src="escapeVelocityScreen.png" alt="Escape Velocity" class="gamefeature"></center>
-  <p class="textboxleft">
+  <div class="textboxleft">
     <strong>Escape Velocity</strong>
-    </br>
-  &nbsp;2017.03
-  </p>
+    <p class="datetext">&nbsp;2017.03</p>
+  </div>
   <p class="textboxright">
-    A physics simulation game featuring questionable special relativity, made in Unity in collaboration with S. Perry-Fagant for McGame Jam 2017.
+    A physics simulation game featuring questionable special relativity, made in Unity in collaboration with Sacha PF for McGame Jam 2017.
     A runaway photon drifting in space, you must escape from the threat of a massive planetary adversary.
     Length dilation depending on the speed of your character (trading off accuracy for playability) bends the surrounding system seen through a dynamic third-person camera.
     Full game downloadable at <a href="https://fredriclam.itch.io/escape-velocity">itch.io</a>.
@@ -95,4 +109,13 @@
 </div>
 </div>
 
+<!-- Footer -->
+<div id="footer">
+  <div class="container">
+    <div align="right">
+        🄯 2018
+    </div>
+  </div>
+</div>
+    
 </html>
