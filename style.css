@@ -1,4 +1,5 @@
 @import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css);
+
 /* Offline debug */
 /*@import url(./bootstrap.min.css);*/
 
@@ -158,7 +159,7 @@ h3 {
 }
 
 h3 {
-  font-family: "MS Mincho";
+  font-family: 'MS Mincho', 'SimSun';
   font-size: 5em;
 }
 
