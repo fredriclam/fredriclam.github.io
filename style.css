@@ -115,6 +115,7 @@ body {
   inline-size: 47%;
   padding-bottom: 30%;
   background-size: 100%;
+  background-position: center;
   margin: 0px;
   display: inline-block;
   vertical-align: middle;
